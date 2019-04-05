@@ -9,7 +9,7 @@ const CharacterInfo = props => {
       {props.data.map(character => {
         // console.log(character);
         return (
-          <div className="characterCard">
+          <div key={character} className="characterCard">
             <h1 className="name">{character.name}</h1>
             <div className="stats">
               <p>
