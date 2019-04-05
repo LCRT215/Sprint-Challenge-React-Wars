@@ -36,16 +36,7 @@ class App extends Component {
       <div className="App">
         <h1 className="Header">React Wars</h1>
         {/* Adding character info props from CharacterInfo.js */}
-        <CharacterInfo
-          Name={this.state.name}
-          Species={this.state.species}
-          Homeworld={this.state.homeworld}
-          Birth
-          Year={this.state.img}
-          Gender={this.state.gender}
-          Height={this.state.height}
-          Mass={this.mass}
-        />
+        <CharacterInfo starwarsChars={this.state.starwarsChars} />
       </div>
     );
   }
