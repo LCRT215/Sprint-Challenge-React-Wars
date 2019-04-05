@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import Card from "./components/CharacterInfo";
+import CharacterInfo from "./components/CharacterInfo";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      characters: ""
     };
   }
 
@@ -34,6 +35,17 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        {/* Adding character info props from CharacterInfo.js */}
+        <CharacterInfo
+          Name={this.state.name}
+          Species={this.state.species}
+          Homeworld={this.state.homeworld}
+          Birth
+          Year={this.state.img}
+          Gender={this.state.gender}
+          Height={this.state.height}
+          Mass={this.mass}
+        />
       </div>
     );
   }
