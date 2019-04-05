@@ -5,14 +5,19 @@ import "./StarWars.css";
 //Adding props so the data can be applied in App.js
 const CharacterInfo = props => {
   return (
-    <div className="container">
-      <h1>Name: </h1>
-      <p>Species: </p>
-      <p>Homeworld: </p>
-      <p>Birth Year:</p>
-      <p>Gender:</p>
-      <p>Height:</p>
-      <p>Mass:</p>
+    <div className="Container">
+      {props.data.map(character => {
+        return (
+          <>
+            <h1>Name: {character.name}</h1>
+            <p>Species: {character.species}</p>
+            <p>Homeworld: {character.homeworld}</p>
+            <p>Gender: {character.gender}</p>
+            <p>Height: {character.height}</p>
+            <p>Weight: {character.mass}</p>
+          </>
+        );
+      })}
     </div>
   );
 };
